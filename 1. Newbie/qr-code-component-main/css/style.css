@@ -1,0 +1,42 @@
+@import url('modern-reset.css');
+
+body {
+  background-color: hsl(212, 45%, 89%);
+  padding: 150px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.card {
+  max-width: 320px;
+  padding: 16px 16px 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 14px;
+}
+
+.text {
+  color: hsl(220, 15%, 55%);
+}
+
+@media (max-width: 375px) {
+  body {
+    padding-top: 90px;
+  }
+}

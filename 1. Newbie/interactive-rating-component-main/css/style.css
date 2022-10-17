@@ -1,0 +1,181 @@
+body {
+  --accent: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --l-grey: hsl(217, 12%, 63%);
+  --m-grey: hsl(216, 12%, 54%);
+  --d-blue: hsl(213, 19%, 18%);
+  --vd-blue: hsl(216, 12%, 8%);
+  --md-blue: hsl(218, 6%, 26%);
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--l-grey);
+  background-color: var(--vd-blue);
+  padding: 200px 15px 0; }
+
+.card {
+  --wc: 410px;
+  width: var(--wc);
+  background-color: var(--d-blue);
+  margin: 0 auto;
+  padding: 35px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative; }
+  .card__star-box {
+    --wsb: 45px;
+    width: var(--wsb);
+    height: var(--wsb);
+    background-color: var(--md-blue);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 28px; }
+  .card__star {
+    --ws: 20px;
+    width: var(--ws);
+    height: var(--ws);
+    background-color: var(--accent);
+    border-radius: 50%;
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+  .card__title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 10px; }
+  .card__text {
+    margin-bottom: 35px; }
+  .card__rating-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px; }
+  .card__rating-item {
+    --wr: 50px;
+    display: block;
+    width: var(--wr);
+    height: var(--wr);
+    border-radius: 50%;
+    background-color: var(--md-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+    .card__rating-item:hover {
+      background-color: var(--accent);
+      color: #fff; }
+  .card__rating-item--active {
+    background-color: var(--l-grey);
+    color: #fff; }
+  .card__btn {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .1rem;
+    color: #fff;
+    background-color: var(--accent);
+    padding: 12px 0 8px;
+    border-radius: 25px;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+    .card__btn:hover {
+      background-color: #fff;
+      color: var(--accent);
+      font-weight: 700; }
+  .card__thank {
+    position: absolute;
+    overflow: hidden;
+    background-color: var(--d-blue);
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    cursor: pointer; }
+    .card__thank--visible {
+      z-index: 1;
+      opacity: 1; }
+  .card__thank-img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-top: 45px; }
+  .card__thank-raiting {
+    display: inline-block;
+    padding: 4px 16px 0;
+    line-height: 1.7rem;
+    background-color: var(--md-blue);
+    color: var(--accent);
+    opacity: .8;
+    border-radius: 20px;
+    margin-bottom: 30px; }
+  .card__thank-title {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: 12px; }
+  .card__thank-text {
+    margin: 0 34px; }
+
+@media (max-width: 450px) {
+  body {
+    padding-top: 155px; }
+
+  .card {
+    --wc: 330px;
+    padding: 30px 22px;
+    border-radius: 15px; }
+    .card__star-box {
+      --wsb: 38px;
+      margin-bottom: 20px; }
+    .card__star {
+      --ws: 17px; }
+    .card__title {
+      font-size: 1.4rem;
+      margin-bottom: 10px; }
+    .card__text {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px; }
+    .card__rating-box {
+      margin-bottom: 20px; }
+    .card__rating-item {
+      --wr: 40px;
+      font-size: 14px;
+      padding-top: 4px; }
+    .card__thank-img {
+      width: 150px;
+      height: auto;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding-top: 30px; }
+    .card__thank-raiting {
+      font-size: 14px;
+      margin-bottom: 25px; }
+    .card__thank-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px; } }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/modern-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="card__choice">
+        <div class="card__star-box">
+          <div class="card__star"></div>
+        </div>
+        <h1 class="card__title">
+          How did we do?
+        </h1>
+        <p class="card__text">
+          Please let us know we did with your support request. All feedback is appreciated to help us umprove our
+          offering!
+        </p>
+        <ul class="card__rating-box">
+          <li class="card__rating-item">
+            <p class="card__item-num">
+              1
+            </p>
+          </li>
+          <li class="card__rating-item">
+            <p class="card__item-num">
+              2
+            </p>
+          </li>
+          <li class="card__rating-item">
+            <p class="card__item-num">
+              3
+            </p>
+          </li>
+          <li class="card__rating-item card__rating-item--active">
+            <p class="card__item-num">
+              4
+            </p>
+          </li>
+          <li class="card__rating-item">
+            <p class="card__item-num">
+              5
+            </p>
+          </li>
+        </ul>
+        <a class="card__btn" href="#">submit</a>
+      </div>
+      <div class="card__thank">
+        <img class="card__thank-img" src="images/thank-img.png" alt="cash terminal">
+        <p class="card__thank-raiting">
+          You selected <span></span> out of 5
+        </p>
+        <h2 class="card__thank-title">
+          Thank you!
+        </h2>
+        <p class="card__thank-text">
+          We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

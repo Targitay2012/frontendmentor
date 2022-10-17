@@ -1,0 +1,201 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --t: .5s;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--desaturated-dark-blue);
+  background-color: var(--light-grayish-blue);
+  padding: 260px 10px 50px;
+  position: relative;
+}
+
+.card {
+  max-width: 730px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.card__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card__img {
+  max-width: 285px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+.card__content {
+  padding: 32px 40px;
+}
+.card__title {
+  line-height: 1.4em;
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 10px;
+}
+.card__text {
+  margin-bottom: 20px;
+}
+.card__author-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.card__author-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.card__author-name {
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+}
+.card__author-share-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--light-grayish-blue);
+  cursor: pointer;
+  -webkit-transition: all var(--t);
+  transition: all var(--t);
+}
+.card__author-share-box:hover {
+  background-color: var(--very-dark-grayish-blue);
+}
+.card__author-share-box:hover svg path {
+  fill: #fff;
+}
+.card__author-share-box svg {
+  width: 15px;
+  height: 13px;
+  -webkit-transform: translate(0, -1px);
+          transform: translate(0, -1px);
+}
+.card__author-share-box svg path {
+  fill: #6E8098;
+  -webkit-transition: all var(--t);
+  transition: all var(--t);
+}
+.card__author-share-box--active {
+  background-color: var(--very-dark-grayish-blue);
+}
+.card__author-share-box--active svg path {
+  fill: #fff;
+}
+.card__social-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  color: var(--grayish-blue);
+  background-color: var(--very-dark-grayish-blue);
+  padding: 18px 35px;
+  border-radius: 10px;
+  bottom: 85px;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all var(--t);
+  transition: all var(--t);
+}
+.card__social-box::after {
+  content: '';
+  position: absolute;
+  --h: 10px;
+  bottom: calc(-2 * var(--h));
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: var(--h) solid transparent;
+  border-top: var(--h) solid var(--very-dark-grayish-blue);
+}
+.card__social-box--active {
+  bottom: 85px;
+  right: -65px;
+  opacity: 1;
+}
+.card__social-text {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-right: 6px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-top: 74px;
+  }
+
+  .card {
+    max-width: 330px;
+  }
+  .card__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card__img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+  }
+  .card__content {
+    padding: 40px 40px 20px;
+  }
+  .card__content--active {
+    padding-bottom: 11px;
+  }
+  .card__title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  .card__text {
+    margin-bottom: 30px;
+  }
+  .card__author-box--active .card__author-share-box--active {
+    background-color: var(--desaturated-dark-blue);
+    z-index: 2;
+  }
+  .card__social-box--active {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 22px 35px;
+    border-radius: 0 0 10px 10px;
+  }
+  .card__social-box--active.card__social-box::after {
+    display: none;
+  }
+}

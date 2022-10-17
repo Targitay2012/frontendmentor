@@ -1,0 +1,135 @@
+:root {
+  // Colors
+  // Primary
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  // Neutral
+  --main-heading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 180px 10px 0;
+  background-color: var(--main-bg);
+  color: var(--main-paragraph);
+}
+
+.stats {
+  --br: 10px;
+  max-width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border-radius: var(--br);
+  margin: 0 auto;
+
+  &__content {
+    max-width: 570px;
+    padding: 75px 75px 50px;
+  }
+
+  &__title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: var(--main-heading-stats);
+    margin-bottom: 20px;
+  }
+
+  &__title span {
+    color: var(--accent);
+  }
+
+  &__text {
+    max-width: 380px;
+    line-height: 1.7;
+    margin-bottom: 65px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item-num {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--main-heading-stats);
+  }
+
+  &__item-text {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  &__img-box {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: hsl(277, 84%, 45%);
+      border-radius: 0 var(--br) var(--br) 0;
+      opacity: .5;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 var(--br) var(--br) 0;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding-top: 90px;
+  }
+
+  .stats {
+    flex-direction: column;
+    max-width: 325px;
+    text-align: center;
+
+    &__content {
+      order: 2;
+      padding: 36px;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    &__img-box::before {
+      border-radius: var(--br) var(--br) 0 0;
+    }
+
+    &__img {
+      border-radius: var(--br) var(--br) 0 0;
+    }
+  }
+}

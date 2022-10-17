@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/modern-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+</head>
+
+<body>
+  <main>
+    <section class="stats">
+      <div class="stats__content">
+        <h1 class="stats__title">
+          Get <span>insights</span> that help your business grow.
+        </h1>
+        <p class="stats__text">
+          Discover the benefits of data analytics and make better dicisions regarding revenue, customer experience, and
+          overall efficiency.
+        </p>
+        <ul class="stats__list">
+          <li class="stats__item">
+            <p class="stats__item-num">
+              10k+
+            </p>
+            <p class="stats__item-text">
+              companies
+            </p>
+          </li>
+          <li class="stats__item">
+            <p class="stats__item-num">
+              314
+            </p>
+            <p class="stats__item-text">
+              templates
+            </p>
+          </li>
+          <li class="stats__item">
+            <p class="stats__item-num">
+              12M+
+            </p>
+            <p class="stats__item-text">
+              queries
+            </p>
+          </li>
+        </ul>
+      </div>
+      <picture class="stats__img-box">
+        <source class="stats__img" media="(max-width: 1000px)" srcset="images/image-header-mobile.jpg">
+        <img class="stats__img" src="images/image-header-desktop.jpg" alt="meeting">
+      </picture>
+    </section>
+  </main>
+</body>
+
+</html>

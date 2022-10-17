@@ -1,0 +1,173 @@
+:root {
+  // Colors
+  // Primary
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: #3829e0;
+  --bright-blue-active: #786deb;
+
+  // Neutral
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  // Time animation
+  --t: .3s;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--desaturated-blue);
+  background-color: var(--pale-blue);
+}
+
+.main {
+  position: relative;
+  padding: 100px 10px 0;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__bg img {
+    width: 100%;
+  }
+}
+
+.order-summary {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 20px 25px 0px rgba(56, 41, 224, 0.17);
+
+  &__content {
+    padding: 45px 50px 50px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-weight: 500;
+
+    margin-bottom: 20px;
+  }
+
+  &__rate {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  &__plane-box {
+    flex-grow: 1;
+  }
+
+  &__plane-title {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--dark-blue);
+  }
+
+  &__rate-link {
+    font-weight: 900;
+    font-size: 0.9rem;
+    color: var(--bright-blue);
+    transition: all var(--t);
+
+    &:hover {
+      color: var(--bright-blue-active);
+    }
+  }
+
+  &__link-proceed {
+    display: block;
+    background-color: var(--bright-blue);
+    color: #fff;
+    box-shadow: 0px 20px 25px 0px rgba(56, 41, 224, 0.17);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 900;
+    letter-spacing: .05em;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: all var(--t);
+
+    &:hover {
+      background-color: var(--bright-blue-active);
+    }
+  }
+
+  &__link-cancel {
+    font-weight: 900;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    transition: all var(--t);
+
+    &:hover {
+      color: var(--dark-blue);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding-top: 70px;
+  }
+
+  .order-summary {
+    max-width: 330px;
+
+    &__content {
+      padding: 30px 24px 25px;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__text {
+      max-width: 270px;
+      margin: 0 auto 20px;
+    }
+
+    &__rate {
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    &__plane-title {
+      font-size: 0.9rem;
+    }
+
+    &__plane-num {
+      font-size: 0.9rem;
+    }
+
+    &__rate-link {
+      font-size: 0.9rem;
+    }
+
+    &__link-proceed {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+:root {
+  // Colors
+  // Primary 
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  //Neutral
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background-headings-buttons: hsl(0, 0%, 95%);
+  // Time animation
+  --t: .3s;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-top-color: var(--background-headings-buttons);
+  color: var(--paragraphs);
+  padding: 170px 10px 50px;
+}
+
+.card {
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 33.333%;
+    padding: 50px 50px 60px;
+
+    &:nth-child(1) {
+      --bg: var(--bright-orange);
+      background-color: var(--bg);
+
+      .card__item-btn {
+        color: var(--bg);
+        transition: all var(--t);
+      }
+
+      .card__item-btn:hover {
+        background-color: var(--bg);
+        color: var(--background-headings-buttons);
+      }
+    }
+
+    &:nth-child(2) {
+      --bg: var(--dark-cyan);
+      background-color: var(--bg);
+
+      .card__item-btn {
+        color: var(--bg);
+      }
+
+      .card__item-btn:hover {
+        background-color: var(--bg);
+        color: var(--background-headings-buttons);
+      }
+    }
+
+    &:nth-child(3) {
+      --bg: var(--very-dark-cyan);
+      background-color: var(--bg);
+
+      .card__item-btn {
+        color: var(--bg);
+      }
+
+      .card__item-btn:hover {
+        background-color: var(--bg);
+        color: var(--background-headings-buttons);
+      }
+    }
+  }
+
+  &__item-img {
+    width: 64px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  &__item-title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: var(--background-headings-buttons);
+    margin-bottom: 20px;
+  }
+
+  &__item-text {
+    flex: 1;
+    line-height: 1.65;
+    margin-bottom: 95px;
+  }
+
+  &__item-btn {
+    color: var(--background-headings-buttons);
+    text-decoration: none;
+    letter-spacing: .05em;
+    padding: 14px 25px;
+    background-color: var(--background-headings-buttons);
+    border: 2px solid var(--background-headings-buttons);
+    border-radius: 40px;
+    transition: all var(--t);
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    padding-top: 90px;
+  }
+
+  .card {
+    max-width: 330px;
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+
+    &__item-text {
+      margin-bottom: 45px;
+    }
+  }
+}

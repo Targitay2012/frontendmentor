@@ -1,0 +1,113 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-gray-transparent: hsla(0, 0%, 59%, .3);
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-grayish-blue);
+  background-color: var(--dark-cyan);
+  padding: 170px 10px 50px;
+  position: relative;
+}
+body::before, body::after {
+  content: '';
+  position: absolute;
+  width: 978px;
+  height: 978px;
+}
+body::before {
+  background-image: url("../images/bg-pattern-top.svg");
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+body::after {
+  background-image: url("../images/bg-pattern-bottom.svg");
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.card {
+  text-align: center;
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 2;
+}
+.card__img-box-bg {
+  margin-bottom: 70px;
+}
+.card__img-box-user {
+  position: absolute;
+  margin: 0 auto;
+  top: 140px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 106px;
+  height: 106px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card__user-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--very-dark-desaturated-blue);
+  margin-bottom: 10px;
+}
+.card__user-name span {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+.card__user-location {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.card__num-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--dark-gray-transparent);
+}
+.card__num-num {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  margin-bottom: 3px;
+}
+.card__num-description {
+  font-size: 0.7rem;
+  letter-spacing: .1em;
+}
+
+@media (max-width: 400px) {
+  body {
+    padding-top: 135px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+  .card__img-box-user {
+    top: 120px;
+    width: 98px;
+    height: 98px;
+  }
+}

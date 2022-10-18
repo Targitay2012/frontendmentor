@@ -27,14 +27,13 @@ body {
 .features {
   text-align: center;
 }
-.features__subtitle {
+.features__title {
   font-weight: 200;
   font-size: 2.5em;
   color: var(--very-dark-blue);
 }
-.features__title {
+.features__title span {
   font-weight: 600;
-  font-size: 2.5em;
   color: var(--very-dark-blue);
   margin-bottom: 20px;
 }

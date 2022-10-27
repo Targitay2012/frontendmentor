@@ -82,9 +82,8 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: hsl(277, 84%, 45%);
+      background-color: var(--accent);
       border-radius: 0 var(--br) var(--br) 0;
-      opacity: .5;
     }
   }
 
@@ -93,6 +92,8 @@ body {
     height: 100%;
     border-radius: 0 var(--br) var(--br) 0;
     object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: .8;
   }
 }
 

@@ -80,9 +80,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #8912d3;
+  background-color: var(--accent);
   border-radius: 0 var(--br) var(--br) 0;
-  opacity: .5;
 }
 .stats__img {
   width: 100%;
@@ -90,6 +89,8 @@ body {
   border-radius: 0 var(--br) var(--br) 0;
   -o-object-fit: cover;
      object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: .8;
 }
 
 @media (max-width: 1000px) {

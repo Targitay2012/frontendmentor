@@ -1,0 +1,125 @@
+:root {
+  --cyan: #2ab2af;
+  --bright-yellow: #c0df34;
+  --light-gray: #e5eff5;
+  --grayish-blue: #98a6bd;
+}
+
+body {
+  --fz: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: var(--fz);
+  background-color: var(--light-gray);
+  padding: 160px 10px 50px;
+}
+
+.price {
+  max-width: 635px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "header header" "price why";
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 26px 0px rgba(152, 166, 189, 0.8);
+          box-shadow: 0px 10px 26px 0px rgba(152, 166, 189, 0.8);
+}
+.price__grid-item {
+  padding: 40px;
+}
+.price__header {
+  grid-area: header;
+}
+.price__title {
+  font-weight: 700;
+  color: var(--cyan);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.price__guarantee {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--bright-yellow);
+  margin-bottom: 10px;
+}
+.price__text {
+  color: var(--grayish-blue);
+}
+.price__offer {
+  grid-area: price;
+  background-color: var(--cyan);
+  color: #fff;
+}
+.price__offer-title, .price__why-title {
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.price__offer-num {
+  font-weight: 700;
+  font-size: 2em;
+}
+.price__offer-num span {
+  font-weight: 400;
+  font-size: var(--fz);
+  vertical-align: 23%;
+  color: var(--light-gray);
+}
+.price__offer-text {
+  margin-bottom: 25px;
+}
+.price__offer-btn {
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 13px 0;
+  background-color: var(--bright-yellow);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 26px 0px rgba(51, 86, 56, 0.5);
+          box-shadow: 0px 10px 26px 0px rgba(51, 86, 56, 0.5);
+}
+.price__why {
+  grid-area: why;
+  background-color: #4abebd;
+  color: #fff;
+}
+.price__why-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 70px 10px 50px;
+  }
+
+  .price {
+    max-width: 310px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "price" "why";
+    border-radius: 5px;
+  }
+  .price__grid-item {
+    padding: 25px;
+  }
+  .price__title {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  .price__guarantee {
+    font-size: .9em;
+    margin-bottom: 20px;
+  }
+  .price__text {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+}

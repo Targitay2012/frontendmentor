@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Targitay2012/frontendmentor/tree/main/1.%20Newbie/huddle-landing-page-with-single-introductory-section-master)
+- Live Site URL: [live site](https://targitay2012.github.io/frontendmentor/1.%20Newbie/huddle-landing-page-with-single-introductory-section-master/)
 
 ## My process
 

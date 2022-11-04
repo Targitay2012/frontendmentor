@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/modern-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+
+<body>
+  <main class="promo">
+    <div class="container">
+      <div class="promo__inner">
+        <div class="promo__content">
+          <a class="promo__logo-link" href="#">
+            <img class="promo__logo-img" src="images/logo.svg" alt="logo">
+          </a>
+          <img class="promo__img-mobile" src="images/hero-mobile.jpg" alt="girl's photo">
+          <h1 class="promo__title">
+            We're<br>
+            <span>coming soon</span>
+          </h1>
+          <p class="promo__text">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+          <form class="promo__form" onsubmit="return checkEmail()">
+            <input id="promoEmail" class="promo__form-input" type="text" placeholder="Email Address"
+              onfocus="offAlarm()">
+            <button class="promo__form-btn" type="submit">
+              <img src="images/icon-arrow.svg" alt="arrow">
+            </button>
+            <img id="promo__form-alarm" class="promo__form-alarm" src="images/icon-error.svg" alt="error icon">
+          </form>
+          <p id="promo__alarm" class="promo__alarm">
+            Please provide a valid email
+          </p>
+        </div>
+        <div class="promo__img-box">
+          <img class="promo__img" src="images/hero-desktop.jpg" alt="girl's photo">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

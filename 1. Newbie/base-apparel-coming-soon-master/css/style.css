@@ -1,0 +1,218 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --linear-one-from: hsl(0, 0%, 100%);
+  --linear-one-to: hsl(0, 100%, 98%);
+  --linear-two-from: hsl(0, 80%, 86%);
+  --linear-two-to: hsl(0, 74%, 74%);
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 50px 0;
+  color: var(--desaturated-red);
+  background-color: #000;
+}
+
+.container {
+  max-width: 1460px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.promo__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.promo__content {
+  padding: 65px 20px 20px;
+  background: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, var(--linear-one-from), var(--linear-one-to));
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.promo__logo-link {
+  display: block;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 125px;
+}
+.promo__img-mobile {
+  display: none;
+}
+.promo__title {
+  font-weight: 300;
+  font-size: 4em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  max-width: 450px;
+  color: var(--desaturated-red);
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.promo__text {
+  max-width: 450px;
+  line-height: 2;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+.promo__title span {
+  font-weight: 600;
+  color: var(--dark-grayish-red);
+}
+.promo__form {
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  position: relative;
+}
+.promo__form-input {
+  display: block;
+  width: 100%;
+  padding: 15px 120px 15px 30px;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 30px;
+  background-color: transparent;
+}
+.promo__form-input::-webkit-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: .5;
+}
+.promo__form-input:-ms-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: .5;
+}
+.promo__form-input::-ms-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: .5;
+}
+.promo__form-input::placeholder {
+  color: var(--desaturated-red);
+  opacity: .5;
+}
+.promo__form-input:focus {
+  outline: 1px solid var(--soft-red);
+}
+.promo__form-btn {
+  position: absolute;
+  width: 100px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--linear-two-from), var(--linear-two-to));
+  -webkit-box-shadow: 0px 15px 35px 0px rgba(238, 140, 140, 0.7);
+          box-shadow: 0px 15px 35px 0px rgba(238, 140, 140, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.promo__form-btn:hover {
+  background: var(--linear-two-from);
+}
+.promo__form-alarm {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 115px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.promo__form-alarm--alarm {
+  display: block;
+}
+.promo__alarm {
+  color: var(--soft-red);
+  max-width: 390px;
+  margin: 0 auto;
+  display: none;
+}
+.promo__alarm--alarm {
+  display: block;
+}
+.promo__img-box {
+  max-width: 610px;
+  width: 100%;
+}
+.promo__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .promo {
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .promo__content {
+    padding: 30px 0 90px;
+  }
+  .promo__logo-link {
+    height: 25px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  .promo__logo-img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .promo__img-mobile {
+    display: block;
+    margin-bottom: 65px;
+  }
+  .promo__title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .promo__text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    max-width: 300px;
+    text-align: center;
+  }
+  .promo__form {
+    max-width: 315px;
+    padding: 0 10px;
+  }
+  .promo__form-input {
+    padding: 11px 90px 11px 25px;
+  }
+  .promo__form-btn {
+    width: 65px;
+  }
+  .promo__form-alarm {
+    right: 80px;
+  }
+  .promo__alarm {
+    text-align: center;
+  }
+  .promo__img-box {
+    display: none;
+  }
+}

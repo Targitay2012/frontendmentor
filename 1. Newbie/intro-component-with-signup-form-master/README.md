@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [link](https://github.com/Targitay2012/frontendmentor/tree/main/1.%20Newbie/intro-component-with-signup-form-master)
+- Live Site URL: [link](https://targitay2012.github.io/frontendmentor/1.%20Newbie/intro-component-with-signup-form-master/)
 
 ## My process
 

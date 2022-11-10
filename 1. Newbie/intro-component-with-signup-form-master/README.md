@@ -49,56 +49,70 @@ Users should be able to:
 
 ### What I learned
 
-In this challenge, I had to break my head over mail verification, and work a lot with different methods for strings. The choice settled on the `match()`, `charAt()`, `search()`, `indexOf()` methods. I learned about regular expressions for searching in strings.
+In this task, I got acquainted with ARIA attributes, such as aria-describedby, aria-live.Practiced in creating accessible forms.
 
 ```html
-  <form class="signup__form">
+    <form class="signup__form js-form" novalidate>
     <label class="signup__form-label">
-      <input class="signup__form-input " type="text" placeholder="First Name">
-      <i class="signup__form-warning">First Name cannot be empty</i>
-      <img class="signup__form-warning-img" src="images/icon-error.svg">
+      <input 
+        class="signup__form-input js-input"
+        type="text"
+        required
+        aria-describedby="firstName-alert"
+        data-id="firstName"
+        placeholder="First Name">
+      <i 
+        id="firstName-alert"
+        class="signup__form-warning js-alert"
+        aria-live="polite"
+        data-id="firstName"></i>
     </label>
     <label class="signup__form-label">
-      <input class="signup__form-input" type="text" placeholder="Last Name">
-      <i class="signup__form-warning">Last Name cannot be empty</i>
-      <img class="signup__form-warning-img" src="images/icon-error.svg">
+      <input
+        class="signup__form-input js-input"
+        type="text"
+        required
+        aria-describedby="secondName-alert"
+        data-id="secondName"
+        placeholder="Last Name">
+      <i
+        id="secondName-alert"
+        class="signup__form-warning js-alert"
+        aria-live="polite"
+        data-id="secondName"></i>
     </label>
     <label class="signup__form-label">
-      <input class="signup__form-input" type="text" placeholder="Email Address">
-      <i class="signup__form-warning">Looks like this is not an email</i>
-      <img class="signup__form-warning-img" src="images/icon-error.svg">
+      <input
+        class="signup__form-input js-input"
+        type="text"
+        required
+        aria-describedby="email-alert"
+        data-id="email"
+        placeholder="Email Address">
+      <i
+        id="email-alert"
+        class="signup__form-warning js-alert"
+        aria-live="polite"
+        data-id="email"></i>
     </label>
     <label class="signup__form-label">
-      <input class="signup__form-input" type="password" placeholder="Password">
-      <i class="signup__form-warning">Password cannot be empty</i>
-      <img class="signup__form-warning-img" src="images/icon-error.svg">
+      <input
+        class="signup__form-input js-input"
+        type="password"
+        required
+        aria-describedby="password-alert"
+        data-id="password"
+        placeholder="Password">
+      <i
+        id="password-alert"
+        class="signup__form-warning js-alert"
+        aria-live="polite"
+        data-id="password"></i>
     </label>
-    <button class="signup__form-btn" type="button" onclick="formCheck()">Claim your free trial</button>
+    <button 
+      class="signup__form-btn" 
+      type="submit">Claim your free trial</button>
   </form>
-```
-```js
-  ...
-  // an array of all letters and numbers entered in the email field
-  let symbolsInEmail = email.value.match(/\w/g);
-  // an array of all hyphens entered in the email field
-  let hyphensInEmail = email.value.match(/[-]/g)
-  // counting the number of dogs and dots in the mail field
-  ...
-  // counting the number of dogs and dots in the mail field
-  for (let i = 0; i < email.value.length; i++) {
-    if (email.value.charAt(i) == '@') countDog++;
-    if (email.value.charAt(i) == '.') countDot++;
-  }
-  ...
-  // checking the correct number of doggy and dot characters
-  // in the mail field
-  if (countDog == 1 && countDot == 1) {
-    positionDog = email.value.search('@');
-    positionDot = email.value.indexOf('.');
-    ...
-  } else {
-    ...
-  }
 ```
 
 ### Continued development
@@ -114,3 +128,7 @@ I continue to improve in HTML, CSS, JS.
 
 - Frontend Mentor - [@Targitay2012](https://www.frontendmentor.io/profile/Targitay2012)
 
+## Acknowledgments
+
+Thanks to [Grace](https://www.frontendmentor.io/profile/grace-snow) and [Vanza Setia](https://www.frontendmentor.io/profile/vanzasetia) for their feedback, and valuable advice, and for pushing me deeper into the problem of accessible forms and accessibility in general.
+Vanza's [article](https://community.codenewbie.org/vanzasetia/how-to-create-accessible-form-with-boring-design-4ab0#javascript) on accessible forms.

@@ -109,6 +109,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to [Grace](https://www.frontendmentor.io/profile/grace-snow) and [Vanza Setia](https://www.frontendmentor.io/profile/vanzasetia) for their feedback, and valuable advice, and for pushing me deeper into the problem of accessible forms and accessibility in general.
+Vanza's [article](https://community.codenewbie.org/vanzasetia/how-to-create-accessible-form-with-boring-design-4ab0#javascript) on accessible forms.

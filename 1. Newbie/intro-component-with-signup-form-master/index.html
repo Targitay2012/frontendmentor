@@ -20,7 +20,6 @@
 <body>
   <main>
     <div class="signup">
-      <div class="signup__bg"></div>
       <div class="container">
         <div class="signup__inner">
           <div class="signup__content">
@@ -37,28 +36,66 @@
               <span>Try it free 7 days</span> then $20/mo. thereafter
             </p>
             <div class="signup__form-box">
-              <form class="signup__form">
+              <form class="signup__form js-form" novalidate>
                 <label class="signup__form-label">
-                  <input class="signup__form-input " type="text" placeholder="First Name">
-                  <i class="signup__form-warning">First Name cannot be empty</i>
-                  <img class="signup__form-warning-img" src="images/icon-error.svg" alt="error icon">
+                  <input 
+                    class="signup__form-input js-input"
+                    type="text"
+                    required
+                    aria-describedby="firstName-alert"
+                    data-id="firstName"
+                    placeholder="First Name">
+                  <i 
+                    id="firstName-alert"
+                    class="signup__form-warning js-alert"
+                    aria-live="polite"
+                    data-id="firstName"></i>
                 </label>
                 <label class="signup__form-label">
-                  <input class="signup__form-input" type="text" placeholder="Last Name">
-                  <i class="signup__form-warning">Last Name cannot be empty</i>
-                  <img class="signup__form-warning-img" src="images/icon-error.svg" alt="error icon">
+                  <input
+                    class="signup__form-input js-input"
+                    type="text"
+                    required
+                    aria-describedby="secondName-alert"
+                    data-id="secondName"
+                    placeholder="Last Name">
+                  <i
+                    id="secondName-alert"
+                    class="signup__form-warning js-alert"
+                    aria-live="polite"
+                    data-id="secondName"></i>
                 </label>
                 <label class="signup__form-label">
-                  <input class="signup__form-input" type="text" placeholder="Email Address">
-                  <i class="signup__form-warning">Looks like this is not an email</i>
-                  <img class="signup__form-warning-img" src="images/icon-error.svg" alt="error icon">
+                  <input
+                    class="signup__form-input js-input"
+                    type="text"
+                    required
+                    aria-describedby="email-alert"
+                    data-id="email"
+                    placeholder="Email Address">
+                  <i
+                    id="email-alert"
+                    class="signup__form-warning js-alert"
+                    aria-live="polite"
+                    data-id="email"></i>
                 </label>
                 <label class="signup__form-label">
-                  <input class="signup__form-input" type="password" placeholder="Password">
-                  <i class="signup__form-warning">Password cannot be empty</i>
-                  <img class="signup__form-warning-img" src="images/icon-error.svg" alt="error icon">
+                  <input
+                    class="signup__form-input js-input"
+                    type="password"
+                    required
+                    aria-describedby="password-alert"
+                    data-id="password"
+                    placeholder="Password">
+                  <i
+                    id="password-alert"
+                    class="signup__form-warning js-alert"
+                    aria-live="polite"
+                    data-id="password"></i>
                 </label>
-                <button class="signup__form-btn" type="button" onclick="formCheck()">Claim your free trial</button>
+                <button 
+                  class="signup__form-btn" 
+                  type="submit">Claim your free trial</button>
               </form>
               <p class="signup__text-terms">
                 By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>

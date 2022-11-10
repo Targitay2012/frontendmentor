@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-In this task, I got acquainted with ARIA attributes, such as aria-describedby, aria-live.Practiced in creating accessible forms.
+In this task, I got acquainted with ARIA attributes, such as `aria-describedby`, `aria-live`.Practiced in creating accessible forms.
 
 ```html
     <form class="signup__form js-form" novalidate>
@@ -131,4 +131,5 @@ I continue to improve in HTML, CSS, JS.
 ## Acknowledgments
 
 Thanks to [Grace](https://www.frontendmentor.io/profile/grace-snow) and [Vanza Setia](https://www.frontendmentor.io/profile/vanzasetia) for their feedback, and valuable advice, and for pushing me deeper into the problem of accessible forms and accessibility in general.
+
 Vanza's [article](https://community.codenewbie.org/vanzasetia/how-to-create-accessible-form-with-boring-design-4ab0#javascript) on accessible forms.

@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [link](https://github.com/Targitay2012/frontendmentor/tree/main/1.%20Newbie/ping-coming-soon-page-master)
+- Live Site URL: [link](https://targitay2012.github.io/frontendmentor/1.%20Newbie/ping-coming-soon-page-master/)
 
 ## My process
 
@@ -59,6 +59,6 @@ I continue to improve in HTML, CSS, JS.
 ## Author
 
 - Frontend Mentor - [@Targitay2012](https://www.frontendmentor.io/profile/Targitay2012)
-- Twitter - [@yourusername](https://www.twitter.com/PurboDans)
+- Twitter - [@PurboDans](https://www.twitter.com/PurboDans)
 
 

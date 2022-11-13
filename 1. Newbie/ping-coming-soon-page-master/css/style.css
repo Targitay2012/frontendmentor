@@ -1,0 +1,223 @@
+:root {
+  --blue: #4f7df3;
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: var(--very-dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 25px 0;
+}
+
+.logo__img {
+  margin: 0 auto;
+}
+
+.subscribe {
+  max-width: 670px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.subscribe__title {
+  font-weight: 300;
+  font-size: 2.3rem;
+  color: var(--gray);
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+.subscribe__title span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+.subscribe__text {
+  margin-bottom: 30px;
+}
+
+.form {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  width: 100%;
+  margin-bottom: 90px;
+}
+.form__label {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.form__input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  padding: 12px 24px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 40px;
+  color: var(--very-dark-blue);
+}
+.form__input::-webkit-input-placeholder {
+  color: var(--pale-blue);
+}
+.form__input:-ms-input-placeholder {
+  color: var(--pale-blue);
+}
+.form__input::-ms-input-placeholder {
+  color: var(--pale-blue);
+}
+.form__input::placeholder {
+  color: var(--pale-blue);
+}
+.form__input:focus-visible {
+  border-color: transparent;
+  outline: 1px solid var(--very-dark-blue);
+}
+.form__input--alarm {
+  border-color: var(--light-red);
+}
+.form__button {
+  display: block;
+  width: 200px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--blue);
+  color: #fff;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(79, 125, 243, 0.4);
+          box-shadow: 0px 10px 20px 0px rgba(79, 125, 243, 0.4);
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.form__button:hover {
+  background-color: #7195f5;
+}
+.form__alarm {
+  position: absolute;
+  font-size: 0.6rem;
+  left: 24px;
+  bottom: -24px;
+  color: var(--light-red);
+}
+
+.footer {
+  padding-bottom: 20px;
+}
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+  margin-bottom: 25px;
+}
+.footer #facebook {
+  width: 16px;
+  height: 17px;
+}
+.footer #twitter {
+  width: 14px;
+  height: 16px;
+}
+.footer #instagram {
+  width: 16px;
+  height: 16px;
+}
+.footer #facebook path,
+.footer #twitter path,
+.footer #instagram path {
+  fill: var(--blue);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.footer__socials-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.footer__socials-link:hover {
+  border-color: transparent;
+  background-color: var(--blue);
+}
+.footer__socials-link:hover #facebook path, .footer__socials-link:hover #twitter path, .footer__socials-link:hover #instagram path {
+  fill: #fff;
+}
+.footer__text {
+  font-size: 0.7rem;
+  margin-bottom: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 540px) {
+  main {
+    margin: 80px 0;
+  }
+
+  .subscribe__title {
+    font-size: 1.1rem;
+  }
+  .subscribe__text {
+    font-size: 0.7rem;
+  }
+
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 12px;
+    font-size: 0.7rem;
+    margin-bottom: 35px;
+  }
+  .form__input--alarm {
+    margin-bottom: 30px;
+  }
+  .form__alarm {
+    bottom: 7px;
+  }
+  .form__button {
+    padding: 12px 0;
+    width: 100%;
+  }
+}

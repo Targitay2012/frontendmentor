@@ -65,9 +65,9 @@ main {
   column-gap: 15px;
   width: 100%;
   margin-bottom: 90px;
+  position: relative;
 
   &__label {
-    position: relative;
     flex: 1;
   }
 
@@ -211,7 +211,7 @@ main {
     }
 
     &__alarm {
-      bottom: 7px;
+      bottom: 65px;
     }
 
     &__button {

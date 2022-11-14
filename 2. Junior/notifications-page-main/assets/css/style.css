@@ -1,0 +1,212 @@
+:root {
+  --red: #f65351;
+  --blue: #0a317b;
+  --white: #ffffff;
+  --very-light-grayish-blue: #f7fafd;
+  --light-grayish-blue-1: #e5effa;
+  --light-grayish-blue-2: #dde7ee;
+  --grayish-blue: #939dae;
+  --dark-grayish-blue: #5e6778;
+  --very-dark-blue: #1c202b;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--very-light-grayish-blue);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+
+.notifications {
+  max-width: 730px;
+  padding: 35px 30px 0;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 20px 20px 5px var(--light-grayish-blue-2);
+          box-shadow: 0 20px 20px 5px var(--light-grayish-blue-2);
+}
+.notifications a {
+  text-decoration: none;
+}
+.notifications__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+.notifications__title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--very-dark-blue);
+}
+.notifications__num {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+.notifications__btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: end;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+}
+.notifications__btn:hover {
+  color: var(--blue);
+}
+.notifications__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.notifications__list li + li {
+  margin-top: 8px;
+}
+.notifications__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  background-color: #fff;
+  padding: 18px;
+}
+.notifications__user-img {
+  width: 45px;
+  height: 45px;
+}
+.notifications__user-name {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.notifications__user-name:hover {
+  color: var(--blue);
+}
+.notifications__item-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.notifications__post, .notifications__group {
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.notifications__post:hover, .notifications__group:hover {
+  color: var(--blue);
+}
+.notifications__item-time {
+  color: var(--grayish-blue);
+}
+.notifications__item-message {
+  display: block;
+  line-height: 1.4rem;
+  color: inherit;
+  padding: 15px 18px;
+  border: 1px solid var(--light-grayish-blue-1);
+  border-radius: 5px;
+  margin-top: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.notifications__item-message:hover {
+  background-color: var(--light-grayish-blue-1);
+}
+.notifications__item-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.notifications__item-img:hover {
+  -webkit-box-shadow: 0 0 0 3px var(--light-grayish-blue-2);
+          box-shadow: 0 0 0 3px var(--light-grayish-blue-2);
+}
+.notifications--unread {
+  background-color: var(--very-light-grayish-blue);
+}
+.notifications--unread .notifications__red-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red);
+  margin-left: 6px;
+}
+
+.footer {
+  padding-bottom: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: var(--white);
+  }
+
+  .notifications {
+    padding: 24px 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 0.9rem;
+  }
+  .notifications__list {
+    line-height: 1.2;
+  }
+  .notifications__item {
+    padding: 15px;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .notifications__user-img {
+    width: 40px;
+    height: 40px;
+  }
+  .notifications__item-info {
+    margin-bottom: 5px;
+  }
+  .notifications__item-message {
+    line-height: 1.3;
+  }
+  .notifications__item-img {
+    width: 40px;
+    height: 40px;
+  }
+}

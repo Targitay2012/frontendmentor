@@ -182,6 +182,9 @@ main {
 .form {
   max-width: 380px;
 }
+.form__not-display {
+  display: none;
+}
 .form label {
   font-size: 0.7rem;
   text-transform: uppercase;

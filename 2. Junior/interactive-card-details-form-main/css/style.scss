@@ -183,6 +183,10 @@ main {
   // display: none;
   max-width: 380px;
 
+  &__not-display {
+    display: none; 
+  }
+
   label {
     font-size: 0.7rem;
     text-transform: uppercase;

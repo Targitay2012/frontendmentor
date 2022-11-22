@@ -270,10 +270,16 @@ function formValedate() {
 
 // handle getting input field focus to display border with gradient color
 function borderInputFocus(input) {
+  if (input.getAttributeNode("id").value == "year") {
+    input.parentElement.parentElement.classList.add("form__input-wrap--focus");
+  }
   input.parentElement.classList.add("form__input-wrap--focus");
 }
 
 function borderInputBlur(input) {
+  if (input.getAttributeNode("id").value == "year") {
+    input.parentElement.parentElement.classList.remove("form__input-wrap--focus");
+  }
   input.parentElement.classList.remove("form__input-wrap--focus");
 }
 

@@ -180,12 +180,7 @@ main {
 }
 
 .form {
-  // display: none;
   max-width: 380px;
-
-  &__not-display {
-    display: none; 
-  }
 
   label {
     font-size: 0.7rem;
@@ -244,7 +239,7 @@ main {
     max-width: 170px;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 80px 80px;
     grid-template-rows: auto auto;
     column-gap: 10px;
     padding-top: 8px;
@@ -257,7 +252,17 @@ main {
   }
 
   &__date input {
+    max-width: 78px;
+  }
+
+  &__date .form__input-wrap {
     max-width: 80px;
+  }
+
+  &__input-year {
+    position: absolute;
+    padding-top: 9px;
+    // color: transparent;
   }
 
   &__cvc {

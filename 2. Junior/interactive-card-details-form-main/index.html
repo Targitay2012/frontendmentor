@@ -82,9 +82,6 @@
               <label for="month">
                 Exp. Date (MM/YY)
               </label>
-              <label for="year">
-                Exp. Date (MM/YY)
-              </label>
               <div class="form__input-wrap">
                 <input
                   id="month"
@@ -95,13 +92,15 @@
                   placeholder="MM">
               </div>
               <div class="form__input-wrap">
-                <input
-                  id="year"
-                  class="form__input form__input-year js-input"
-                  type="text"
-                  aria-describedby="card-date"
-                  data-id="month-year"
-                  placeholder="YY">
+                <label class="form__label-year">
+                  <input
+                    id="year"
+                    class="form__input form__input-year js-input"
+                    type="text"
+                    aria-describedby="card-date"
+                    data-id="month-year"
+                    placeholder="YY">
+                </label>
               </div>  
               <p
                 id="card-date" 

@@ -182,9 +182,6 @@ main {
 .form {
   max-width: 380px;
 }
-.form__not-display {
-  display: none;
-}
 .form label {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -248,7 +245,7 @@ main {
   max-width: 170px;
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 80px 80px;
   grid-template-rows: auto auto;
   -webkit-column-gap: 10px;
           column-gap: 10px;
@@ -259,7 +256,14 @@ main {
   grid-column: span 2;
 }
 .form__date input {
+  max-width: 78px;
+}
+.form__date .form__input-wrap {
   max-width: 80px;
+}
+.form__input-year {
+  position: absolute;
+  padding-top: 9px;
 }
 .form__cvc {
   max-width: 190px;

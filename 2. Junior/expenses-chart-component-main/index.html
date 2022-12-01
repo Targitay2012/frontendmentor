@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="stylesheet" href="css/modern-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <div class="chart">
+      <div class="chart__top">
+        <h1 class="chart__top-text">
+          My balance
+        </h1>
+        <p class="chart__top-num">
+          $921.48
+        </p>
+      </div>
+      <div class="chart__content">
+        <h2 class="chart__content-title">
+          Spending - Last 7 days
+        </h2>
+        <ul class="chart__bars-list">
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="mon"></span>
+            <p class="chart__bars-text">
+              mon
+            </p>
+            <p class="chart__bars-value" data-id="mon"></p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="tue"></span>
+            <p class="chart__bars-text">
+              tue
+            </p>
+            <p class="chart__bars-value" data-id="tue">$52.36</p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="wed"></span>
+            <p class="chart__bars-text">
+              wed
+            </p>
+            <p class="chart__bars-value" data-id="wed">$52.36</p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="thu"></span>
+            <p class="chart__bars-text">
+              thu
+            </p>
+            <p class="chart__bars-value" data-id="thu">$52.36</p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="fri"></span>
+            <p class="chart__bars-text">
+              fri
+            </p>
+            <p class="chart__bars-value" data-id="fri">$52.36</p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="sat"></span>
+            <p class="chart__bars-text">
+              sat
+            </p>
+            <p class="chart__bars-value" data-id="sat">$52.36</p>
+          </li>
+          <li class="chart__bars-item">
+            <span style="--h: 100px; --factor: 0;" data-id="sun"></span>
+            <p class="chart__bars-text">
+              sun
+            </p>
+            <p class="chart__bars-value" data-id="sun">$111</p>
+          </li>
+        </ul>
+        <p class="chart__content-text">
+          Total this month
+        </p>
+        <div class="chart__content-bottom">
+          <p class="chart__content-sum">
+            $478.33
+          </p>
+          <div class="chart__content-bottom-right">
+            <p class="chart__content-bottom-num">
+              +2.4%
+            </p>
+            <p class="chart__content-text">
+              from last month
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"> 
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Targitay2012" target="_blank">@Targitay2012</a>.
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

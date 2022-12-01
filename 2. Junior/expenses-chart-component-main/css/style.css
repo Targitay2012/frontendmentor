@@ -1,0 +1,223 @@
+:root {
+  --soft-red: #ec775f;
+  --cyan: #76b5bc;
+  --dark-brown: #382314;
+  --medium-brown: #93867b;
+  --cream: #f8e9dd;
+  --very-pale-orange: #fffaf5;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-brown);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  background-color: var(--cream);
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.chart {
+  max-width: 540px;
+  width: 100%;
+}
+.chart__top {
+  background-color: var(--soft-red);
+  border-radius: 20px;
+  color: var(--very-pale-orange);
+  padding: 30px 40px 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.chart__top::before, .chart__top::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.chart__top::before {
+  background-color: var(--dark-brown);
+  right: 40px;
+}
+.chart__top::after {
+  border-color: var(--very-pale-orange);
+  right: 65px;
+}
+.chart__top-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.chart__top-num {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.chart__content {
+  background-color: var(--very-pale-orange);
+  padding: 40px;
+  border-radius: 20px;
+}
+.chart__content-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+.chart__bars-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  padding: 0 0 35px;
+  border-bottom: 2px solid var(--cream);
+  margin: 0 0 30px;
+}
+.chart__bars-item {
+  max-width: 50px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  position: relative;
+}
+.chart__bars-item span {
+  display: inline-block;
+  width: 100%;
+  height: calc(var(--h) * var(--factor));
+  background-color: var(--soft-red);
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.chart__bars-item span:hover {
+  opacity: .8;
+}
+.chart__bars-text {
+  font-size: 0.9rem;
+  color: var(--medium-brown);
+}
+.chart__bars-value {
+  position: absolute;
+  opacity: 0;
+  top: -45px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  padding: 5px 8px;
+  border-radius: 5px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: 2;
+}
+.chart__content-text {
+  color: var(--medium-brown);
+}
+.chart__content-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.chart__content-sum {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.chart__content-bottom-right {
+  text-align: right;
+}
+.chart__content-bottom-num {
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 500px) {
+  .chart {
+    max-width: 340px;
+  }
+  .chart__top {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  .chart__top::before, .chart__top::after {
+    width: 40px;
+    height: 40px;
+  }
+  .chart__top::before {
+    right: 20px;
+  }
+  .chart__top::after {
+    right: 40px;
+  }
+  .chart__top-text {
+    font-size: 0.9rem;
+  }
+  .chart__top-num {
+    font-size: 1.5rem;
+  }
+  .chart__content {
+    padding: 20px 20px 25px;
+  }
+  .chart__content-title {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  .chart__bars-list {
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+  }
+  .chart__bars-item {
+    max-width: 32px;
+  }
+  .chart__bars-text {
+    font-size: 0.7rem;
+  }
+  .chart__content-text {
+    font-size: 0.9rem;
+  }
+  .chart__content-sum {
+    font-size: 2rem;
+  }
+}

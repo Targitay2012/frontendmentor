@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="css/modern-reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- -------------------- -->
+  <!-- start header section -->
+  <!-- -------------------- -->
+  <header class="header">
+    <nav class="nav">
+      <a class="logo header__logo" href="#">
+        <img class="logo-img" src="images/logo.svg" alt="logo">
+      </a>
+      <div class="nav__inner">
+        <!-- start menu section -->
+        <ul class="menu__list">
+          <li class="menu__item menu__item--submenu">
+            <span>Features</span>
+            <!-- start submenu section -->
+            <ul class="menu__submenu-list menu__submenu-first">
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Todo List</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Calendar</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Reminders</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item menu__item--submenu">
+            <span>Company</span>
+            <!-- start submenu section -->
+            <ul class="menu__submenu-list menu__submenu-second">
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">History</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Our Team</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">Careers</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item-link" href="#">About</a>
+          </li>
+        </ul>
+        <a class="login__btn" href="#">Login</a>
+        <a class="register__btn " href="#">Register</a>
+      </div>
+      <!-- start burger icons section -->
+      <a class="burger-btn" href="#">
+        <img class="burger-btn-img burger-btn-open" src="images/icon-menu.svg" alt="burger button">
+        <img class="burger-btn-img burger-btn-close" src="images/icon-close-menu.svg" alt="burger button">
+      </a>
+    </nav>
+  </header>
+  <main class="main">
+    <!-- ------------------- -->
+    <!-- start intro section -->
+    <!-- ------------------- -->
+    <div class="intro">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__left">
+            <h1 class="intro__title">
+              Make remote work
+            </h1>
+            <p class="intro__text">
+              Get your team in sync, no matter your location. Streamline processes,
+              create team rituals, and watch productivity soar.
+            </p>
+            <a class="intro__btn" href="#">Learn more</a>
+            <div class="intro__clients-box">
+              <div class="intro__clients-img-box">
+                <img class="intro__clients-img" src="images/client-databiz.svg" alt="client icon">
+              </div>
+              <div class="intro__clients-img-box">
+                <img class="intro__clients-img" src="images/client-audiophile.svg" alt="client icon">
+              </div>
+              <div class="intro__clients-img-box">
+                <img class="intro__clients-img" src="images/client-meet.svg" alt="client icon">
+              </div>
+              <div class="intro__clients-img-box">
+                <img class="intro__clients-img" src="images/client-maker.svg" alt="client icon">
+              </div>
+            </div>
+          </div>
+          <div class="intro__right">
+            <picture>
+              <source media="(min-width: 901px)" srcset="images/image-hero-desktop.png">
+              <img class="intro__right-img" src="images/image-hero-mobile.png" alt="man with notebook">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/Targitay2012">Targitay2012</a>.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

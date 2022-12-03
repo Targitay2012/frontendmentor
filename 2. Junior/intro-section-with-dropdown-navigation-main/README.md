@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [link](https://github.com/Targitay2012/frontendmentor/tree/main/2.%20Junior/intro-section-with-dropdown-navigation-main)
+- Live Site URL: [link](https://targitay2012.github.io/frontendmentor/2.%20Junior/intro-section-with-dropdown-navigation-main/)
 
 ## My process
 

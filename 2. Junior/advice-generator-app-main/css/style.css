@@ -1,0 +1,117 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: rgb(82, 255, 168);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 15px 20px;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: grid;
+  place-items: center;
+}
+
+.advice {
+  max-width: 540px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 45px 45px 90px;
+  position: relative;
+  text-align: center;
+  background-color: var(--dark-grayish-blue);
+}
+.advice__title {
+  font-size: .75rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  color: var(--neon-green);
+  margin-bottom: 30px;
+}
+.advice__text {
+  position: relative;
+  padding-bottom: 30px;
+  font-size: 1.75rem;
+}
+.advice__text::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
+  width: 100%;
+  background-image: url("../images/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.advice__btn {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  background-color: var(--neon-green);
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0);
+          box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0);
+  -webkit-transition: -webkit-box-shadow .2s ease-in;
+  transition: -webkit-box-shadow .2s ease-in;
+  transition: box-shadow .2s ease-in;
+  transition: box-shadow .2s ease-in, -webkit-box-shadow .2s ease-in;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.advice__btn:hover {
+  -webkit-box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0.8);
+          box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0.8);
+}
+.advice__btn:active {
+  bottom: -2px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: inherit;
+}
+
+/* ************* start media ************ */
+@media (max-width: 500px) {
+  .advice {
+    padding: 40px 20px 80px;
+  }
+  .advice__title {
+    font-size: 0.666rem;
+  }
+  .advice__text {
+    font-size: 1.5rem;
+  }
+  .advice__text::after {
+    background-image: url("../images/pattern-divider-mobile.svg");
+  }
+}

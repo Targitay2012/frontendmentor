@@ -1,0 +1,129 @@
+:root {
+    // Colors
+    // Primary
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: rgb(82, 255, 168);
+    // Neutral
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--light-cyan);
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 20px;
+}
+
+.main {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+}
+
+.advice {
+    max-width: 540px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 45px 45px 90px;
+    position: relative;
+
+    text-align: center;
+
+    background-color: var(--dark-grayish-blue);
+
+    &__title {
+        font-size: .75rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        color: var(--neon-green);
+
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        position: relative;
+        padding-bottom: 30px;
+
+        // font-size: 28px;
+        font-size: 1.75rem;
+    }
+
+    &__text::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+        right: 0;
+        height: 16px;
+        width: 100%;
+
+        background-image: url('../images/pattern-divider-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    &__btn {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        
+        background-color: var(--neon-green);
+        box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0);
+        transition: box-shadow .2s ease-in;
+        cursor: pointer;
+
+        display: grid;
+        place-items: center;
+    }
+
+    &__btn:hover {
+        box-shadow: 0px 0px 23px 0px rgba(82, 255, 168, 0.8);
+    }
+
+    &__btn:active {
+        bottom: -2px;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: inherit;
+}
+
+/* ************* start media ************ */
+
+@media (max-width: 500px) {
+    .advice {
+        padding: 40px 20px 80px;
+
+        &__title {
+            font-size: 0.666rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+
+        &__text::after {
+            background-image: url('../images/pattern-divider-mobile.svg');
+        }
+    }
+
+}

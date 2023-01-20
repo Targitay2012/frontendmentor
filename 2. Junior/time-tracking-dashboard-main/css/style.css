@@ -1,0 +1,391 @@
+@font-face {
+  font-family: 'Rubik-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: local("Rubik-Light"), url("../fonts/Rubik-Light.woff2") format("woff2"), url("../fonts/Rubik-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rubik-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local("Rubik-Regular"), url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Rubik-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: local("Rubik-Medium"), url("../fonts/Rubik-Medium.woff2") format("woff2"), url("../fonts/Rubik-Medium.woff") format("woff");
+  font-display: swap;
+}
+body {
+  font-family: 'Rubik-Light', sans-serif;
+  font-weight: 300;
+}
+
+:root {
+  --blue: #5847eb;
+  --light-red-work: #ff8c66;
+  --soft-blue-play: #56c2e6;
+  --light-red-study: #ff5c7c;
+  --lime-green-exercise: #4acf81;
+  --violet-social: #7536d3;
+  --soft-orange-self-care: #f1c65b;
+  --very-dark-blue: #0f1424;
+  --dark-blue: #1c1f4a;
+  --desaturated-blue: #34397b;
+  --pale-blue: #bdc1ff;
+  --border-radius: 15px;
+  --padding: 30px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: 1.125rem;
+  background-color: var(--very-dark-blue);
+  color: var(--pale-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  display: grid;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 20px 0;
+}
+
+.report {
+  place-self: center;
+  width: 100%;
+}
+.report__inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+  grid-template-areas: "person work play study" "person gym social care";
+}
+.report__person-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--dark-blue);
+  border-radius: var(--border-radius);
+  grid-area: person;
+}
+.report__person-info {
+  background-color: var(--blue);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.report__person-img-box {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.report__text {
+  font-size: 1rem;
+}
+.report__person-name {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #fff;
+}
+.report__person-timeframes-box {
+  padding: var(--padding);
+}
+.report__person-timeframes-box a + a {
+  margin-top: 15px;
+}
+.report__person-timeframes {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.report__person-timeframes:hover {
+  color: #fff;
+}
+.report__person-timeframes--active {
+  color: #fff;
+}
+.report__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.report__item {
+  padding-top: 44px;
+  position: relative;
+  overflow: hidden;
+}
+.report__item:nth-child(2) {
+  grid-area: work;
+}
+.report__item:nth-child(3) {
+  grid-area: play;
+}
+.report__item:nth-child(4) {
+  grid-area: study;
+}
+.report__item:nth-child(5) {
+  grid-area: gym;
+}
+.report__item:nth-child(6) {
+  grid-area: social;
+}
+.report__item:nth-child(7) {
+  grid-area: care;
+}
+.report__item::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  z-index: -1;
+}
+.report__item:nth-child(2):after {
+  background-image: url(../images/icon-work.svg);
+  width: 79px;
+  height: 79px;
+}
+.report__item:nth-child(3):after {
+  background-image: url(../images/icon-play.svg);
+  width: 76px;
+  height: 77px;
+}
+.report__item:nth-child(4):after {
+  background-image: url(../images/icon-study.svg);
+  width: 79px;
+  height: 79px;
+}
+.report__item:nth-child(5):after {
+  background-image: url(../images/icon-exercise.svg);
+  width: 81px;
+  height: 55px;
+  top: 0;
+}
+.report__item:nth-child(6):after {
+  background-image: url(../images/icon-social.svg);
+  width: 75px;
+  height: 100px;
+  top: -12px;
+}
+.report__item:nth-child(7):after {
+  background-image: url(../images/icon-self-care.svg);
+  width: 67px;
+  height: 67px;
+  top: -15px;
+}
+.report__item-inner {
+  background-color: var(--dark-blue);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.report__item-inner:hover {
+  background-color: var(--desaturated-blue);
+}
+.report__item-inner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  top: -44px;
+  border-radius: var(--border-radius);
+  z-index: -1;
+}
+.report__item:nth-child(2) .report__item-inner:after {
+  background-color: var(--light-red-work);
+}
+.report__item:nth-child(3) .report__item-inner:after {
+  background-color: var(--soft-blue-play);
+}
+.report__item:nth-child(4) .report__item-inner:after {
+  background-color: var(--light-red-study);
+}
+.report__item:nth-child(5) .report__item-inner:after {
+  background-color: var(--lime-green-exercise);
+}
+.report__item:nth-child(6) .report__item-inner:after {
+  background-color: var(--violet-social);
+}
+.report__item:nth-child(7) .report__item-inner:after {
+  background-color: var(--soft-orange-self-care);
+}
+.report__item-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.report__item-title {
+  font-size: 1.125rem;
+  color: #fff;
+}
+.report__item-title-btn {
+  display: grid;
+  height: 27px;
+}
+.report__item-title-btn svg path {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.report__item-title-btn:hover svg path {
+  fill: #fff;
+}
+.report__item-title-btn svg {
+  place-self: center;
+}
+.report__item-time {
+  font-size: 3.5rem;
+  color: #fff;
+}
+.report__item-last-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+}
+.report__item-last-time {
+  margin-left: 5px;
+}
+
+.footer {
+  margin-bottom: 20px;
+}
+.footer a {
+  display: inline;
+}
+.footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.footer .attribution a {
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .report__inner {
+    grid-template-columns: 245px 1fr 1fr;
+    grid-template-areas: "person work play" "person study gym" "person social care";
+  }
+}
+@media (max-width: 900px) {
+  .report__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "person person" "work play" "study gym" "social care";
+  }
+  .report__person-info {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    grid-template-areas: "img text" "img name";
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .report__person-img-box {
+    grid-area: img;
+    margin-bottom: 0;
+  }
+  .report__text {
+    grid-area: text;
+  }
+  .report__person-name {
+    grid-area: name;
+  }
+  .report__person-timeframes-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .report__person-timeframes-box a + a {
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .report__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "person" "work" "play" "study" "gym" "social" "care";
+  }
+  .report__person-info {
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  .report__person-img-box {
+    width: 70px;
+    height: 70px;
+  }
+  .report__person-name {
+    font-size: 1.5rem;
+  }
+  .report__person-timeframes-box {
+    padding: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .report__item {
+    padding-top: 38px;
+  }
+  .report__item-inner {
+    display: grid;
+    grid-template-areas: "top top" "current previous";
+    padding: 25px 20px 20px;
+  }
+  .report__item-inner::after {
+    top: -38px;
+  }
+  .report__item-top {
+    grid-area: top;
+    margin-bottom: 0;
+  }
+  .report__item-time {
+    grid-area: current;
+    font-size: 32px;
+  }
+  .report__item-last-box {
+    grid-area: previous;
+    place-self: center flex-end;
+  }
+}

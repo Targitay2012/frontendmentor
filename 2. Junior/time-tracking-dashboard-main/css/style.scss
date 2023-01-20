@@ -1,0 +1,447 @@
+@import 'fonts';
+
+:root {
+	//## Colors
+
+	//### Primary
+
+	--blue: #5847eb;
+
+	--light-red-work: #ff8c66;
+	--soft-blue-play: #56c2e6;
+	--light-red-study: #ff5c7c;
+	--lime-green-exercise: #4acf81;
+	--violet-social: #7536d3;
+	--soft-orange-self-care: #f1c65b;
+
+	//### Neutral
+
+	--very-dark-blue: #0f1424;
+	--dark-blue: #1c1f4a;
+	--desaturated-blue: #34397b;
+	--pale-blue: #bdc1ff;
+
+	--border-radius: 15px;
+	--padding: 30px;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+
+body {
+	font-size: 1.125rem; // 16px * 1.125 = 18px
+	@extend %rubik-300;
+	background-color: var(--very-dark-blue);
+	color: var(--pale-blue);
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.main {
+	display: grid;
+	flex-grow: 1;
+	padding: 20px 0;
+}
+
+.report {
+	place-self: center;
+	width: 100%;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: 30px;
+		row-gap: 30px;
+		grid-template-areas:
+			"person work play study"
+			"person gym social care";
+	}
+
+	&__person-box {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--dark-blue);
+		border-radius: var(--border-radius);
+		grid-area: person;
+	}
+
+	&__person-info {
+		background-color: var(--blue);
+		border-radius: var(--border-radius);
+		padding: var(--padding);
+		flex-grow: 1;
+	}
+
+	&__person-img-box {
+		width: 84px;
+		height: 84px;
+		border-radius: 50%;
+		border: 3px solid #fff;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+
+	&__person-img {}
+
+	&__text {
+		font-size: 1rem;
+	}
+
+	&__person-name {
+		font-size: 2.5rem; // 16px * 2.5 = 40px
+		font-weight: 300;
+		line-height: 1.2;
+		color: #fff;
+	}
+
+	&__person-timeframes-box {
+		padding: var(--padding);
+	}
+
+	&__person-timeframes-box a+a {
+		margin-top: 15px;
+	}
+
+	&__person-timeframes {
+		transition: all .3s;
+	}
+
+	&__person-timeframes:hover {
+		color: #fff;
+	}
+
+	&__person-timeframes--active {
+		color: #fff;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		padding-top: 44px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__item:nth-child(2) {
+		grid-area: work;
+	}
+
+	&__item:nth-child(3) {
+		grid-area: play;
+	}
+
+	&__item:nth-child(4) {
+		grid-area: study;
+	}
+
+	&__item:nth-child(5) {
+		grid-area: gym;
+	}
+
+	&__item:nth-child(6) {
+		grid-area: social;
+	}
+
+	&__item:nth-child(7) {
+		grid-area: care;
+	}
+
+	&__item::after {
+		content: '';
+		position: absolute;
+		top: -10px;
+		right: 20px;
+		z-index: -1;
+	}
+
+	&__item:nth-child(2):after {
+		background-image: url(../images/icon-work.svg);
+		width: 79px;
+		height: 79px;
+	}
+
+	&__item:nth-child(3):after {
+		background-image: url(../images/icon-play.svg);
+		width: 76px;
+		height: 77px;
+	}
+
+	&__item:nth-child(4):after {
+		background-image: url(../images/icon-study.svg);
+		width: 79px;
+		height: 79px;
+	}
+
+	&__item:nth-child(5):after {
+		background-image: url(../images/icon-exercise.svg);
+		width: 81px;
+		height: 55px;
+		top: 0;
+	}
+
+	&__item:nth-child(6):after {
+		background-image: url(../images/icon-social.svg);
+		width: 75px;
+		height: 100px;
+		top: -12px;
+	}
+
+	&__item:nth-child(7):after {
+		background-image: url(../images/icon-self-care.svg);
+		width: 67px;
+		height: 67px;
+		top: -15px;
+	}
+
+	&__item-inner {
+		background-color: var(--dark-blue);
+		border-radius: var(--border-radius);
+		padding: var(--padding);
+		cursor: pointer;
+		position: relative;
+		transition: all .3s;
+	}
+
+	&__item-inner:hover {
+		background-color: var(--desaturated-blue);
+	}
+
+	&__item-inner::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+		top: -44px;
+		border-radius: var(--border-radius);
+		z-index: -1;
+	}
+
+	&__item:nth-child(2) .report__item-inner:after {
+		background-color: var(--light-red-work);
+	}
+
+	&__item:nth-child(3) .report__item-inner:after {
+		background-color: var(--soft-blue-play);
+	}
+
+	&__item:nth-child(4) .report__item-inner:after {
+		background-color: var(--light-red-study);
+	}
+
+	&__item:nth-child(5) .report__item-inner:after {
+		background-color: var(--lime-green-exercise);
+	}
+
+	&__item:nth-child(6) .report__item-inner:after {
+		background-color: var(--violet-social);
+	}
+
+	&__item:nth-child(7) .report__item-inner:after {
+		background-color: var(--soft-orange-self-care);
+	}
+
+	&__item-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+	}
+
+	&__item-title {
+		font-size: 1.125rem;
+		color: #fff;
+	}
+
+	&__item-title-btn {
+		display: grid;
+		height: 27px;
+	}
+
+	&__item-title-btn svg {
+		path {
+			transition: all .3s;
+		}
+	}
+
+	&__item-title-btn:hover svg {
+		path {
+			fill: #fff;
+		}
+	}
+
+	&__item-title-btn svg {
+		place-self: center;
+	}
+
+	&__item-time {
+		font-size: 3.5rem; // 16px * 3.5 = 56px
+		color: #fff;
+	}
+
+	&__item-last-box {
+		display: flex;
+		font-size: 1rem;
+	}
+
+	&__item-last-period {}
+
+	&__item-last-time {
+		margin-left: 5px;
+	}
+}
+
+.footer {
+	margin-bottom: 20px;
+
+	a {
+		display: inline;
+	}
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.attribution a {
+		color: #fff;
+	}
+}
+
+// ************************************************************************
+// ************************************************************************
+
+@media (max-width: 1100px) {
+	.report {
+		&__inner {
+			grid-template-columns: 245px 1fr 1fr;
+			grid-template-areas:
+				"person work play"
+				"person study gym"
+				"person social care";
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.report {
+		&__inner {
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas:
+				"person person"
+				"work play"
+				"study gym"
+				"social care";
+		}
+
+		&__person-info {
+			display: grid;
+			grid-template-columns: 84px 1fr;
+			grid-template-areas:
+				"img text"
+				"img name";
+			column-gap: 20px;
+		}
+
+		&__person-img-box {
+			grid-area: img;
+			margin-bottom: 0;
+		}
+
+		&__text {
+			grid-area: text;
+		}
+
+		&__person-name {
+			grid-area: name;
+		}
+
+		&__person-timeframes-box {
+			display: flex;
+			column-gap: 20px;
+		}
+
+		&__person-timeframes-box a+a {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.report {
+		&__inner {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"person"
+				"work"
+				"play"
+				"study"
+				"gym"
+				"social"
+				"care";
+		}
+
+		&__person-info {
+			column-gap: 10px;
+		}
+
+		&__person-img-box {
+			width: 70px;
+			height: 70px;
+		}
+
+		&__person-name {
+			font-size: 1.5rem; // 16px * 1.5 = 24px
+		}
+
+		&__person-timeframes-box {
+			padding: 20px;
+			justify-content: space-between;
+		}
+
+		&__item {
+			padding-top: 38px;
+		}
+
+		&__item-inner {
+			display: grid;
+			grid-template-areas:
+				"top top"
+				"current previous";
+			padding: 25px 20px 20px;
+		}
+
+		&__item-inner::after {
+			top: -38px;
+		}
+
+		&__item-top {
+			grid-area: top;
+			margin-bottom: 0;
+		}
+
+		&__item-time {
+			grid-area: current;
+			font-size: 32px;
+		}
+
+		&__item-last-box {
+			grid-area: previous;
+			place-self: center flex-end;
+		}
+	}
+}

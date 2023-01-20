@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Time tracking dashboard</title>
+
+		<link rel="stylesheet" href="css/modern-reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<style></style>
+	</head>
+	<body>
+		<main class="main">
+			<section class="report">
+				<div class="container report__inner">
+					<div class="report__person-box">
+						<div class="report__person-info">
+							<div class="report__person-img-box">
+								<img
+									class="report__person-img"
+									src="images/image-jeremy.png"
+									alt="photo"
+								/>
+							</div>
+							<p class="report__text">Report for</p>
+							<h1 class="report__person-name">Jeremy Robson</h1>
+						</div>
+						<div class="report__person-timeframes-box">
+							<a class="report__person-timeframes" id="daily" href="#!"
+								>Daily</a
+							>
+							<a class="report__person-timeframes" id="weekly" href="#!"
+								>Weekly</a
+							>
+							<a class="report__person-timeframes" id="monthly" href="#!"
+								>Monthly</a
+							>
+						</div>
+					</div>
+					<div class="report__item" id="work">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Work</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">32hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">36hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="report__item" id="play">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Play</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">10hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">8hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="report__item" id="study">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Study</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">4hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">7hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="report__item" id="gym">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Exercise</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">4hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">5hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="report__item" id="social">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Social</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">5hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">10hrs</p>
+							</div>
+						</div>
+					</div>
+					<div class="report__item" id="care">
+						<div class="report__item-inner">
+							<div class="report__item-top">
+								<h2 class="report__item-title">Self Care</h2>
+								<a class="report__item-title-btn" href="#!">
+									<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+											fill="#BBC0FF"
+											fill-rule="evenodd"
+										/>
+									</svg>
+								</a>
+							</div>
+							<p class="report__item-time">2hrs</p>
+							<div class="report__item-last-box">
+								<p class="report__item-last-period"></p>
+								<p class="report__item-last-time">2hrs</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="https://www.frontendmentor.io/profile/Targitay2012" target="_blank">@Targitay2012</a>.
+			</div>
+		</footer>
+		<script src="js/main.js"></script>
+	</body>
+</html>

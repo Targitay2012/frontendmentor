@@ -19,10 +19,10 @@
 	</head>
 	<body>
 		<main class="main">
-			<section class="calculator">
+			<div class="calculator">
 				<div class="calculator__left">
 					<label class="calculator__bill">
-						<p class="calculator__title">Bill</p>
+						<span class="calculator__title">Bill</span>
 						<input
 							class="calculator__input calculator__input-bill"
 							type="text"
@@ -32,13 +32,11 @@
 					</label>
 					<p class="calculator__title">Select Tip %</p>
 					<div class="calculator__tip-box">
-						<!-- <div class="calculator__tip-btn-box"> -->
-							<button class="calculator__tip-btn">5%</button>
-							<button class="calculator__tip-btn">10%</button>
-							<button class="calculator__tip-btn">15%</button>
-							<button class="calculator__tip-btn">25%</button>
-							<button class="calculator__tip-btn">50%</button>
-						<!-- </div> -->
+						<button class="calculator__tip-btn">5%</button>
+						<button class="calculator__tip-btn">10%</button>
+						<button class="calculator__tip-btn">15%</button>
+						<button class="calculator__tip-btn">25%</button>
+						<button class="calculator__tip-btn">50%</button>
 						<label class="calculator__tip-label">
 							<input
 								class="calculator__input calculator__input-custom"
@@ -48,14 +46,14 @@
 						</label>
 					</div>
 					<label class="calculator__number-of-people">
-						<p class="calculator__title">Number of People</p>
+						<span class="calculator__title">Number of People</span>
 						<input
 							class="calculator__input calculator__input-num-people"
 							type="text"
 							id="number-of-people"
 							placeholder="0"
 						/>
-						<p class="calculator__input-num-people-alert-message"></p>
+						<span class="calculator__input-num-people-alert-message"></span>
 					</label>
 				</div>
 				<div class="calculator__right">
@@ -75,7 +73,7 @@
 					</div>
 					<button class="calculator__reset-btn">Reset</button>
 				</div>
-			</section>
+			</div>
 		</main>
 
 		<footer class="footer">

@@ -130,7 +130,7 @@ label {
   font-size: 1rem;
   color: red;
   position: absolute;
-  top: 0;
+  top: 9px;
   right: 0;
 }
 .calculator__right {

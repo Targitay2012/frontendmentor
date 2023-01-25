@@ -1,0 +1,263 @@
+@import 'fonts';
+
+:root {
+	// ## Colors
+
+	// ### Primary
+
+	--strong-cyan: #26c0ab;
+
+	// ### Neutral
+
+	--very-dark-cyan: #00494d;
+	--dark-grayish-cyan: #5e7a7d;
+	--grayish-cyan: #7f9c9f;
+	--light-grayish-cyan: #c5e4e7;
+	--very-light-grayish-cyan: #f4fafa;
+	--white: #ffffff;
+}
+
+body {
+	font-family: 'SpaceMono-Bold', monospace;
+	font-weight: 700;
+	font-size: 24px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 15px;
+	background-color: var(--light-grayish-cyan);
+	color: var(--dark-grayish-cyan);
+}
+
+label {
+	display: block;
+}
+
+.main {
+	flex-grow: 1;
+	display: grid;
+	padding-bottom: 20px;
+}
+
+.calculator {
+	max-width: 920px;
+	width: 100%;
+	margin: 0 auto;
+	place-self: center;
+	border-radius: 22px;
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+	column-gap: 48px;
+
+	&__left {
+		// max-width: 380px;
+		// width: 100%;
+		width: 380px;
+		flex-shrink: 0;
+		padding: 10px 0;
+	}
+
+	&__bill {
+		margin-top: 10px;
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		font-size: 1rem;
+		margin-bottom: 5px;
+	}
+
+	&__input {
+		color: var(--very-dark-cyan);
+		text-align: right;
+		border: none;
+		border-radius: 5px;
+		background-color: var(--very-light-grayish-cyan);
+		width: 100%;
+		padding: 5px 15px;
+	}
+
+	&__input:focus {
+		outline-color: var(--strong-cyan);
+	}
+
+	&__tip-box {
+		position: relative;
+		margin-bottom: 40px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 14px;
+		row-gap: 16px;
+		margin-top: 15px;
+	}
+
+	&__tip-btn {
+		padding: 0;
+		margin: 0;
+		border: none;
+		background-color: var(--very-dark-cyan);
+		color: var(--white);
+		border-radius: 5px;
+		padding: 5px 0;
+		cursor: pointer;
+		transition: all .3s;
+	}
+
+	&__tip-btn:hover {
+		color: var(--very-dark-cyan);
+		background-color: #9fe8df;
+	}
+
+	&__tip-btn:focus {
+		outline-color: var(--strong-cyan);
+		outline-offset: 3px;
+	}
+
+	&__tip-btn--active {
+		color: var(--very-dark-cyan);
+		background-color: #26c2ad;
+	}
+
+	&__number-of-people {
+		position: relative;
+	}
+
+	&__input-num-people--alert:focus {
+		outline-color: red;
+	}
+
+
+	&__input-num-people-alert-message {
+		font-size: 1rem;
+		color: red;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__right {
+		width: 100%;
+		padding: 40px;
+		background-color: var(--very-dark-cyan);
+		border-radius: 14px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 40px;
+	}
+
+	&__result-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__tip-text-box {}
+
+	&__tip-title {
+		font-size: 1rem;
+		color: var(--white);
+	}
+
+	&__tip-text {
+		font-size: .875rem;
+		color: #78afb2;
+	}
+
+	&__tip-number {
+		font-size: 3rem;
+		color: var(--strong-cyan);
+	}
+
+	&__reset-btn {
+		margin: auto 0 0;
+		padding: 5px 0;
+		background-color: #0d686d;
+		color: var(--very-dark-cyan);
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		text-transform: uppercase;
+		transition: all .3s;
+	}
+
+	&__reset-btn:hover {
+		color: var(--very-dark-cyan);
+		background-color: #9fe8df;
+	}
+
+	&__reset-btn:focus-visible {
+		outline-style: solid;
+		outline: 1px solid var(--strong-cyan);
+		outline-offset: 3px;
+	}
+
+	&__reset-btn--active {
+		background-color: #26c2ad;
+	}
+}
+
+.footer {
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+// **************************************************************************
+// **************************************************************************
+
+@media (max-width: 940px) {
+	.calculator {
+		&__left {
+			width: 270px;
+		}
+
+		&__tip-box {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 840px) {
+	.calculator {
+		flex-direction: column;
+		row-gap: 20px;
+
+		&__left {
+			width: 100%;
+		}
+
+		&__tip-box {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.calculator {
+		padding: 30px 25px;
+		row-gap: 35px;
+
+		&__left {
+			padding: 0;
+		}
+
+		&__tip-box {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__right {
+			padding: 25px;
+			row-gap: 30px;
+		}
+
+		&__tip-number {
+			font-size: 1.875rem;
+		}
+	}
+}

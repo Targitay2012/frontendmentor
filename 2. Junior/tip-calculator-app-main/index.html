@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+
+		<link rel="stylesheet" href="css/modern-reset.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<main class="main">
+			<section class="calculator">
+				<div class="calculator__left">
+					<label class="calculator__bill">
+						<p class="calculator__title">Bill</p>
+						<input
+							class="calculator__input calculator__input-bill"
+							type="text"
+							id="bill"
+							placeholder="0"
+						/>
+					</label>
+					<p class="calculator__title">Select Tip %</p>
+					<div class="calculator__tip-box">
+						<!-- <div class="calculator__tip-btn-box"> -->
+							<button class="calculator__tip-btn">5%</button>
+							<button class="calculator__tip-btn">10%</button>
+							<button class="calculator__tip-btn">15%</button>
+							<button class="calculator__tip-btn">25%</button>
+							<button class="calculator__tip-btn">50%</button>
+						<!-- </div> -->
+						<label class="calculator__tip-label">
+							<input
+								class="calculator__input calculator__input-custom"
+								type="text"
+								placeholder="Custom"
+							/>
+						</label>
+					</div>
+					<label class="calculator__number-of-people">
+						<p class="calculator__title">Number of People</p>
+						<input
+							class="calculator__input calculator__input-num-people"
+							type="text"
+							id="number-of-people"
+							placeholder="0"
+						/>
+						<p class="calculator__input-num-people-alert-message"></p>
+					</label>
+				</div>
+				<div class="calculator__right">
+					<div class="calculator__result-box">
+						<div class="calculator__tip-text-box">
+							<p class="calculator__tip-title">Tip Amount</p>
+							<p class="calculator__tip-text">/ person</p>
+						</div>
+						<p class="calculator__tip-number calculator__tip-amount">$0.00</p>
+					</div>
+					<div class="calculator__result-box">
+						<div class="calculator__tip-text-box">
+							<p class="calculator__tip-title">Total</p>
+							<p class="calculator__tip-text">/ person</p>
+						</div>
+						<p class="calculator__tip-number calculator__tip-total">$0.00</p>
+					</div>
+					<button class="calculator__reset-btn">Reset</button>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a
+					href="https://www.frontendmentor.io/profile/Targitay2012"
+					target="_blank"
+					>@Targitay2012</a
+				>.
+			</div>
+		</footer>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
